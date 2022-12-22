@@ -5,17 +5,17 @@
  *  
  *  Return: String with all letters Uppercased.
  */
-char *string_toupper(char *s)
-{
-	int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		if (*(s + i) >= 'a' && *(s + i) <= 'z')
-		{
-			*(s + i) = *(s + i) - 32;
-		}
-		i++;
-	}
-	return (s);
+char *string_toupper(char *str)                                                                                                      
+{                                                                                                                                    
+	   int index = 0;                                                                                                               
+		                                                                                                                                     
+	while (str[index])                                                                                                           
+	{                                                                                                                            
+		if (str[index] >= 'a' && str[index] <= 'z')                                                                          
+			str[index] -= 32;                                                                                            
+								                                                                                                                                     
+			index++;                                                                                             
+	}                                                                                                                            
+			                                                                                                                                   return (str);                                                                                                                
 }
+
