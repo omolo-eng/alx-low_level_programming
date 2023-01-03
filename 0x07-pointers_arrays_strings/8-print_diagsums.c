@@ -5,20 +5,24 @@
  * @a: This is the array to sum
  * @size: This is the length of the array
  */
-
-void print_diagsums(int *a, int size)
-{
-	int ascedent, descendet, i, sumAscedent, sumDescedent;
-
-	sumAscedent = sumDescedent = 0;
-	ascedent = 0;
-	descendet = size - 1;
-	for (i = 0; i < size; i++)
-	{
-		sumAscedent += *(a + i * size + ascedent);
-		sumDescedent += *(a + i * size + descendet);
-		ascedent += 1;
-		descendet -= 1;
-	}
-	printf("%d, %d\n", sumAscedent, sumDescedent);
+void print_diagsums(int *a, int size)                                                                                              
+{                                                                                                                                  
+	int index, sum1 = 0, sum2 = 0;                                                                                             
+		                                                                                                                                   
+	for (index = 0; index < size; index++)                                                                                     
+	{                                                                                                                          
+		sum1 += a[index];                                                                                                  
+		a += size;                                                                                                         
+	}                                                                                                                          
+			                                                                                                                                   
+	a -= size;                                                                                                                 
+				                                                                                                                                   
+	for (index = 0; index < size; index++)                                                                                     
+	{                                                                                                                          
+		sum2 += a[index];                                                                                                  
+		a -= size;                                                                                                         
+	}                                                                                                                          
+					                                                                                                                                   
+	printf("%d, %d\n", sum1, sum2);                                                                                            
 }
+
