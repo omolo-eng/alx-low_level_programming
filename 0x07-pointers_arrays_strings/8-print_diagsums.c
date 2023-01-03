@@ -1,10 +1,19 @@
-#include "holberton.h"
 
-/**
- * print_diagsums - print the sum the diognals of a square matrix of integer
- * @a: This is the array to sum
- * @size: This is the length of the array
+/**                                                                                                                                
+ *  File: 8-print_diagsums.c                                                                                                        
+ * Auth: voulnter                                                                                                                  
+ */                                                                                                                                
+                                                                                                                                   
+#include "main.h"                                                                                                                  
+#include <stdio.h>                                                                                                                 
+                                                                                                                                   
+/**                                                                                                                                
+ * print_diagsums - Prints the sum of the two diagonals                                                                            
+ * of a square matrix of integers.                                                                                
+ * @a: The matrix of integers.                                                                                                     
+ * @size: The size of the matrix.                                                                                                  
  */
+
 void print_diagsums(int *a, int size)                                                                                              
 {                                                                                                                                  
 	int index, sum1 = 0, sum2 = 0;                                                                                             
